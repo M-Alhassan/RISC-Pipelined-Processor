@@ -277,5 +277,7 @@ Fetching the second instruction 0x8544 and its result in the register file (the 
 
 ## ✒️ Author
 
-| [<img src="https://github.com/M-Alhassan.png?size=115" width="115"><br><sub>@M-Alhassan</sub>](https://github.com/M-Alhassan) |
-| :---------------------------------------------------------------------------------------------------------------------------: |# RISC-Pipelined-Processor
+ [<img src="https://github.com/M-Alhassan.png?size=115" width="115"><br><sub>@M-Alhassan</sub>](https://github.com/M-Alhassan) 
+
+<hr>
+
