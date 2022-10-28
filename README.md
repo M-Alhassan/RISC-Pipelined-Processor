@@ -116,33 +116,33 @@
 
     ![](./img/Picture16.png)
 
-    11. **Main Control Unit**
+11. **Main Control Unit**
 
-        We have used filled ROM with values of every opcodes' signals as a decoder to generate all possible signals to control each instruction from its opcode in this datapath. In our design we chose to a ROM that works as a decoder and connected to a splitter that group signals in their specified place as shown in the table below:
+    We have used filled ROM with values of every opcodes' signals as a decoder to generate all possible signals to control each instruction from its opcode in this datapath. In our design we chose to a ROM that works as a decoder and connected to a splitter that group signals in their specified place as shown in the table below:
 
-        | Bits | Singal/Signals |
-        | --- | --- |
-        | 0-1 | WBdata |
-        | 2 | MemWr |
-        | 3 | MemRd |
-        | 4 | AluSrc |
-        | 5 | ExtOp |
-        | 6 | RegWr |
-        | 7-8 | RegDst |
+    | Bits | Singal/Signals |
+    | --- | --- |
+    | 0-1 | WBdata |
+    | 2 | MemWr |
+    | 3 | MemRd |
+    | 4 | AluSrc |
+    | 5 | ExtOp |
+    | 6 | RegWr |
+    | 7-8 | RegDst |
 
-        The Control Unit's purpose is to produce the signals to the Register file, ALU, and Data Memory. There is a single input for the 5-bit opcode, and 7 signal outputs. The outputs are as following:
+    The Control Unit's purpose is to produce the signals to the Register file, ALU, and Data Memory. There is a single input for the 5-bit opcode, and 7 signal outputs. The outputs are as following:
 
-        - WBdata (bit 0&1): Selects whether the data on BusW should be coming from the ALU or the Data memory.
-        - MemWr (bit 2): for store instructions.
-        - MemRd (bit 3): for load instructions.
-        - AluSrc (bit 4): Selects whether the 2nd ALU input should be from BusB or the extended 5-bit immediate.
-        - ExtOp (bit 5): Controls the extension of the 5-bit immediate
-        - RegWr (bit 6): Enables the writing of the registers in the register file.
-        - RegDst (bit 7 & 8): Chooses which register should be the register destination.
+    - WBdata (bit 0&1): Selects whether the data on BusW should be coming from the ALU or the Data memory.
+    - MemWr (bit 2): for store instructions.
+    - MemRd (bit 3): for load instructions.
+    - AluSrc (bit 4): Selects whether the 2nd ALU input should be from BusB or the extended 5-bit immediate.
+    - ExtOp (bit 5): Controls the extension of the 5-bit immediate
+    - RegWr (bit 6): Enables the writing of the registers in the register file.
+    - RegDst (bit 7 & 8): Chooses which register should be the register destination.
 
-        ![](./img/Picture17.png)
+    ![](./img/Picture17.png)
 
-        ![](./img/Picture18.png)
+    ![](./img/Picture18.png)
 
     **Control signals for each instruction**
 
@@ -172,7 +172,7 @@
     | **JAL** | 29 | 10 | 1 | 0 | 0 | 0 | 0 | 10 |
     | **IMM** | 30 | xx | x | x | x | x | x | xx |
 
-<br>
+    <br>
 
 # 2. Simulation and Testing
 
